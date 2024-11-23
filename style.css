@@ -1,53 +1,61 @@
-/* General Styles */
 body {
-    font-family: "Times New Roman", Times, serif;
-    background-color: white;
-    color: navy;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    background-color: #f5f8fa;
+    color: #333;
 }
 
-/* Header Styles */
 header {
-    text-align: center;
-    padding: 1rem;
-    background-color: navy;
+    background-color: #003366;
     color: white;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-/* Navigation Styles */
-nav {
-    margin-top: 0.5rem;
+    padding: 15px 0;
+    text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Main Content Styles */
-main {
-    padding: 2rem;
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #eaf4fc;
+    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: navy;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.container.home {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.container.home img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+h1 {
+    color: #003366;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
 }
