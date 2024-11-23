@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skill Sets</a>
-        </nav>
-    </header>
-    <main>
-        <div class="container home">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQEKE4k0BIRMmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707441371948?e=1737590400&v=beta&t=kjqiKfRiSQLSilIrEKWmAK7Z7o-SGAdiaxNiKARQ78M" alt="Professional photo">
-            <div class="text">
-                <h1>Welcome to My Website</h1>
-                <p>This is my personal portfolio, designed to showcase my skills, projects, and background. Explore the sections to learn more about me and my work.</p>
-            </div>
-        </div>
-    </main>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="skills.html">Skill Sets</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container d-flex align-items-center" style="min-height: 100vh;">
+    <div>
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQEKE4k0BIRMmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707441371948?e=1737590400&v=beta&t=kjqiKfRiSQLSilIrEKWmAK7Z7o-SGAdiaxNiKARQ78M" alt="Profile Photo" class="img-thumbnail mb-4">
+      <h1 class="fw-bold">Welcome to My Website</h1>
+      <p>This is my personal portfolio, designed to showcase my skills, projects, and background.</p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
 
