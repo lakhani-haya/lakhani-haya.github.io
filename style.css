@@ -95,6 +95,12 @@ footer p {
   margin: 0;
 }
 
+.container.text-center.my-5 {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 30px;
+}
+
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1.25rem;
