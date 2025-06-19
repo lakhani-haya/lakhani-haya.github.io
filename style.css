@@ -1,31 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+:root {
+  --primary-navy: #17223b;
+  --accent-gold: #fcb900;
+  --soft-white: #f7f9fa;
+  --text-dark: #222b45;
+  --muted-gray: #7f8c8d;
+  --card-shadow: 0 6px 24px rgba(23,34,59,0.08);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f7f9;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, #263159 100%);
+  color: var(--text-dark);
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  background-color: #2C3E50;
+  background: var(--primary-navy) !important;
+  box-shadow: 0 2px 12px rgba(23,34,59,0.08);
   padding: 10px 0;
 }
 
 .navbar-brand {
-  color: #ECF0F1 !important;
-  font-weight: 600;
-  font-size: 1.5rem;
+  color: var(--accent-gold) !important;
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+.navbar-nav {
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.navbar-collapse {
+  justify-content: flex-start !important;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 12px;
 }
 
 .navbar-nav .nav-link {
-  color: #ECF0F1 !important;
-  font-weight: bold;
+  color: var(--soft-white) !important;
+  font-weight: 500;
   font-size: 1.1rem;
+  transition: color 0.2s;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #3498DB !important;
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: var(--accent-gold) !important;
 }
 
 .container {
@@ -34,83 +63,199 @@ body {
   padding: 20px;
 }
 
+h1, h2, h3, h4 {
+  color: var(--accent-gold);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 h1 {
-  font-size: 2.5rem;
-  color: #2C3E50;
-  font-weight: bold;
-  text-align: center;
+  font-size: 2.7rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--accent-gold);
 }
 
 .card {
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  box-shadow: var(--card-shadow);
   border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(23,34,59,0.13);
 }
 
 .card-body {
-  background-color: #FFFFFF;
-  padding: 30px;
-  border-radius: 8px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 14px;
 }
 
 .card-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2C3E50;
+  color: var(--accent-gold);
   margin-bottom: 20px;
 }
 
 ul.list-unstyled {
   font-size: 1rem;
-  color: #7F8C8D;
+  color: var(--muted-gray);
 }
-
 ul.list-unstyled li {
   margin-bottom: 15px;
 }
-
 ul.list-unstyled li strong {
-  color: #2C3E50;
+  color: var(--accent-gold);
 }
 
 .btn-primary {
-  background-color: #3498DB;
-  border-color: #3498DB;
+  background: var(--accent-gold);
+  border: none;
+  color: var(--primary-navy);
   font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(252,185,0,0.08);
 }
 
-.btn-primary:hover {
-  background-color: #2980B9;
-  border-color: #2980B9;
+.btn-primary:hover, .btn-primary:focus {
+  background: #ffd95c;
+  color: var(--primary-navy);
+  box-shadow: 0 4px 16px rgba(252,185,0,0.13);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent-gold);
+  color: var(--accent-gold);
+  background: transparent;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background: var(--accent-gold);
+  color: var(--primary-navy);
 }
 
 footer {
-  background-color: #2C3E50;
-  color: #ECF0F1;
+  background: var(--primary-navy);
+  color: var(--soft-white);
   padding: 20px;
   text-align: center;
+  border-top: 2px solid var(--accent-gold);
 }
 
 footer p {
   margin: 0;
 }
 
-.container.text-center.my-5 {
-  background-color: #ecf0f1;
-  border-radius: 10px;
-  padding: 30px;
+/* Hero Section */
+.container.d-flex.align-items-center.flex-column.text-center {
+  background: linear-gradient(120deg, var(--primary-navy) 60%, #263159 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(23,34,59,0.13);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 48px 24px 32px 24px;
+  animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) both;
+  color: #fff;
+}
+
+.img-thumbnail {
+  border-radius: 50%;
+  border: 4px solid var(--accent-gold);
+  box-shadow: 0 4px 24px rgba(23,34,59,0.13);
+  transition: transform 0.3s;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+/* Make all text in the hero section white for maximum contrast */
+.container.d-flex.align-items-center.flex-column.text-center h1,
+.container.d-flex.align-items-center.flex-column.text-center h3,
+.container.d-flex.align-items-center.flex-column.text-center p {
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(23,34,59,0.18);
+}
+
+.container.d-flex.align-items-center.flex-column.text-center h1 {
+  color: var(--accent-gold) !important;
+}
+
+.container.d-flex.align-items-center.flex-column.text-center h3 {
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.container.d-flex.align-items-center.flex-column.text-center p {
+  opacity: 0.92;
+}
+
+/* Section Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) both;
+}
+
+/* Button Animation */
+.btn {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(252,185,0,0.13);
+}
+
+/* Introduction Section */
+.container.text-center.my-5.border.p-4.rounded {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(23,34,59,0.08);
+  margin-bottom: 48px;
+  animation: fadeInUp 1.4s 0.2s cubic-bezier(.23,1.01,.32,1) both;
 }
 
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1.25rem;
   }
-
   .navbar-nav .nav-link {
     font-size: 1rem;
   }
-
   h1 {
     font-size: 2rem;
+  }
+  .container.d-flex.align-items-center.flex-column.text-center {
+    padding: 32px 8px 24px 8px;
+  }
+  .container.text-center.my-5.border.p-4.rounded {
+    padding: 18px 6px;
+  }
+}
+
+/* On large screens, center the brand and keep nav slightly left of center */
+@media (min-width: 992px) {
+  .navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-brand {
+    margin-right: 40px;
+  }
+  .navbar-collapse {
+    flex-grow: 0;
   }
 }
