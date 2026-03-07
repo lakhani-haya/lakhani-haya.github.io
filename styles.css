@@ -656,7 +656,7 @@ body {
 
 /* Academic Highlights Section */
 .academic-section {
-    background: linear-gradient(135deg, var(--primary-black) 0%, #0c1426 100%);
+    background: var(--primary-white);
     position: relative;
     overflow: hidden;
 }
@@ -676,10 +676,25 @@ body {
 }
 
 .academic-section .section-title {
-    background: linear-gradient(135deg, var(--primary-white) 0%, var(--accent-pink) 100%);
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--accent-pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.academic-section .step-content {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(124, 156, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
+}
+
+.academic-section .step-content:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(124, 156, 255, 0.4);
+}
+
+.academic-section .step-description {
+    color: var(--gray-dark);
 }
 
 .academic-timeline {
