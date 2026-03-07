@@ -672,25 +672,42 @@ body {
 
 .academic-icon {
     font-size: 3rem;
-    filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.5));
+    filter: none;
+    color: var(--primary-black);
 }
 
 .academic-section .section-title {
-    background: linear-gradient(135deg, var(--primary-black) 0%, var(--accent-pink) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-black);
 }
 
 .academic-section .step-content {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(124, 156, 255, 0.2);
+    background: var(--primary-white);
+    border: 1px solid var(--gray-light);
     box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
 }
 
 .academic-section .step-content:hover {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(124, 156, 255, 0.4);
+    background: var(--primary-white);
+    border-color: var(--accent-pink);
+}
+
+.academic-section .step-number {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    box-shadow: 0 0 0 2px var(--accent-pink);
+}
+
+.academic-section .step-number:hover {
+    box-shadow: 0 0 0 2px var(--accent-pink);
+    transform: scale(1.05);
+}
+
+.academic-section .step-title {
+    color: var(--primary-black);
+}
+
+.academic-section .step-location {
+    color: var(--gray-medium);
 }
 
 .academic-section .step-description {
@@ -806,7 +823,8 @@ body {
 .step-description {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.95rem;
-    color: var(--gray-light);
+    filter: none;
+    color: var(--primary-black);
     line-height: 1.6;
     flex-grow: 1;
     display: flex;
