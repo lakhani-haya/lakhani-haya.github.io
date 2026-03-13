@@ -904,7 +904,7 @@ body {
 
 /* Experience Section */
 .experience-section {
-    background: var(--primary-white);
+    background: var(--gray-light);
     position: relative;
     overflow: hidden;
 }
