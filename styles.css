@@ -1906,6 +1906,191 @@ body {
     transform: translateX(5px) scale(1.1);
 }
 
+/* Alternating section backgrounds + smooth transitions */
+:root {
+    --section-alt-a: var(--primary-white);
+    --section-alt-b: var(--gray-light);
+    --section-transition-height: 160px;
+}
+
+.section {
+    background: var(--section-bg);
+}
+
+.section:nth-of-type(odd) {
+    --section-bg: var(--section-alt-a);
+    --next-bg: var(--section-alt-b);
+}
+
+.section:nth-of-type(even) {
+    --section-bg: var(--section-alt-b);
+    --next-bg: var(--section-alt-a);
+}
+
+.section::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: var(--section-transition-height);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--next-bg));
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Light, sleek overrides for formerly dark sections */
+.about-section,
+.projects-section,
+.skills-section,
+.values-section {
+    color: var(--primary-black);
+    background: transparent;
+}
+
+.about-section .section-title,
+.projects-section .section-title,
+.skills-section .section-title,
+.values-section .section-title {
+    color: var(--primary-black);
+}
+
+.about-section .section-title::after {
+    background: linear-gradient(90deg, transparent, var(--accent-pink), transparent);
+}
+
+.main-quote p {
+    color: var(--primary-black);
+}
+
+.subtext p {
+    color: var(--gray-medium);
+}
+
+.country-code,
+.country-full-name {
+    color: var(--primary-black);
+}
+
+.country-subtitle {
+    color: var(--gray-medium);
+}
+
+.projects-section::before,
+.skills-section::before {
+    content: none;
+}
+
+.projects-subtitle p {
+    color: var(--gray-medium);
+}
+
+.project-card {
+    background: var(--primary-white);
+    border: 1px solid var(--gray-light);
+    box-shadow: 0 12px 28px rgba(31, 41, 55, 0.08);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(124, 156, 255, 0.4);
+    background: var(--primary-white);
+    box-shadow: 0 18px 36px rgba(31, 41, 55, 0.12);
+}
+
+.project-title {
+    color: var(--primary-black);
+}
+
+.project-example {
+    color: var(--gray-medium);
+}
+
+.project-description {
+    color: var(--gray-dark);
+}
+
+.github-link {
+    background: var(--primary-white);
+    border: 1px solid var(--gray-light);
+    color: var(--primary-black);
+    box-shadow: 0 6px 16px rgba(31, 41, 55, 0.08);
+}
+
+.github-link:hover {
+    background: var(--gray-light);
+    border-color: rgba(124, 156, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(31, 41, 55, 0.12);
+}
+
+.skills-section .section-title,
+.soft-skills-title {
+    color: var(--primary-black);
+}
+
+.skill-group {
+    background: var(--primary-white);
+    border: 1px solid var(--gray-light);
+}
+
+.skill-tag {
+    background: rgba(124, 156, 255, 0.08);
+    border: 1px solid rgba(124, 156, 255, 0.2);
+}
+
+.skill-tag:hover {
+    background: rgba(124, 156, 255, 0.16);
+    border-color: rgba(124, 156, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(124, 156, 255, 0.2);
+}
+
+.skill-bubble {
+    background: rgba(124, 156, 255, 0.08);
+    border: 2px solid rgba(124, 156, 255, 0.25);
+}
+
+.bubble-text {
+    color: var(--primary-black);
+}
+
+.values-section .section-title {
+    color: var(--primary-black);
+}
+
+.value-item {
+    background: var(--primary-white);
+    border: 1px solid var(--gray-light);
+}
+
+.value-item h3 {
+    color: var(--primary-black);
+}
+
+.value-item p {
+    color: var(--gray-dark);
+}
+
+.contact-link {
+    background: var(--primary-white);
+    border: 1px solid var(--gray-light);
+    color: var(--primary-black);
+    box-shadow: 0 6px 16px rgba(31, 41, 55, 0.08);
+}
+
+.contact-link:hover {
+    background: var(--gray-light);
+    box-shadow: 0 12px 24px rgba(31, 41, 55, 0.12);
+}
+
+.contact-link .arrow {
+    color: var(--gray-medium);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
