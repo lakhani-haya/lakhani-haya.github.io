@@ -808,7 +808,7 @@ body {
 }
 
 .step-location {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1rem;
     font-weight: 500;
     color: var(--accent-pink);
