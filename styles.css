@@ -937,7 +937,7 @@ body {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: var(--gray-light);
+    background: rgba(124, 156, 255, 0.5);
     transform: translateX(-50%);
 }
 
