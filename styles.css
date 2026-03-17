@@ -1962,6 +1962,8 @@ body {
 .skills-section .section-title,
 .values-section .section-title {
     color: var(--primary-black);
+    background: none;
+    -webkit-text-fill-color: initial;
 }
 
 .about-section .section-title::after {
