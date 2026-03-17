@@ -1908,8 +1908,8 @@ body {
 
 /* Alternating section backgrounds + smooth transitions */
 :root {
-    --section-alt-a: var(--primary-white);
-    --section-alt-b: var(--gray-light);
+    --section-alt-a: #f2f4f8;
+    --section-alt-b: #e9edf5;
     --section-transition-height: 160px;
 }
 
@@ -1934,7 +1934,7 @@ body {
     right: 0;
     bottom: -1px;
     height: var(--section-transition-height);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--next-bg));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--next-bg) 85%);
     pointer-events: none;
     z-index: 0;
 }
@@ -1950,7 +1950,11 @@ body {
 .skills-section,
 .values-section {
     color: var(--primary-black);
-    background: transparent;
+    background: linear-gradient(180deg, #f1f4f9 0%, #e7ecf4 100%);
+}
+
+.contact-section {
+    background: linear-gradient(180deg, #f1f4f9 0%, #e7ecf4 100%);
 }
 
 .about-section .section-title,
@@ -1991,7 +1995,7 @@ body {
 }
 
 .project-card {
-    background: var(--primary-white);
+    background: #f9fafc;
     border: 1px solid var(--gray-light);
     box-shadow: 0 12px 28px rgba(31, 41, 55, 0.08);
 }
@@ -1999,7 +2003,7 @@ body {
 .project-card:hover {
     transform: translateY(-6px);
     border-color: rgba(124, 156, 255, 0.4);
-    background: var(--primary-white);
+    background: #f9fafc;
     box-shadow: 0 18px 36px rgba(31, 41, 55, 0.12);
 }
 
@@ -2016,7 +2020,7 @@ body {
 }
 
 .github-link {
-    background: var(--primary-white);
+    background: #f9fafc;
     border: 1px solid var(--gray-light);
     color: var(--primary-black);
     box-shadow: 0 6px 16px rgba(31, 41, 55, 0.08);
@@ -2034,7 +2038,7 @@ body {
 }
 
 .skill-group {
-    background: var(--primary-white);
+    background: #f9fafc;
     border: 1px solid var(--gray-light);
 }
 
@@ -2054,6 +2058,14 @@ body {
     border: 2px solid rgba(124, 156, 255, 0.25);
 }
 
+.skill-bubble::before {
+    background: radial-gradient(circle, rgba(124, 156, 255, 0.12) 0%, transparent 70%);
+}
+
+.bubble-icon {
+    filter: drop-shadow(0 0 12px rgba(124, 156, 255, 0.35));
+}
+
 .bubble-text {
     color: var(--primary-black);
 }
@@ -2063,7 +2075,7 @@ body {
 }
 
 .value-item {
-    background: var(--primary-white);
+    background: #f9fafc;
     border: 1px solid var(--gray-light);
 }
 
@@ -2076,7 +2088,7 @@ body {
 }
 
 .contact-link {
-    background: var(--primary-white);
+    background: #f9fafc;
     border: 1px solid var(--gray-light);
     color: var(--primary-black);
     box-shadow: 0 6px 16px rgba(31, 41, 55, 0.08);
